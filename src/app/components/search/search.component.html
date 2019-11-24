@@ -1,0 +1,56 @@
+<div class="search-container">
+  <div class="search-by-container">
+    <div class="search-by-label">
+      Search By,
+    </div>
+    <div class="search-text-container">
+      <input type="text" class="search-text" (keydown)="onKeyDown($event)" value="{{searchKey}}" />
+    </div>
+    <div class="search-by-selector">
+      <div class="search-by-title {{searchBy === 'title' ? 'active' : ''}}" (click)="onSelectSearchBy('title')">
+        Title
+      </div>
+      <div class="search-by-isbn {{searchBy === 'isbn' ? 'active' : ''}}" (click)="onSelectSearchBy('isbn')">
+        ISBN
+      </div>
+    </div>
+
+  </div>
+  <div class="search-results-container">
+    <div class="search-header-container">
+      <div class="s-no">
+        S.No
+      </div>
+      <div class="title">
+        Title
+      </div>
+      <div class="published-date">
+        Published Date
+      </div>
+      <div class="product-key">Product Key(ISBN)</div>
+      <div class="owner">
+        Owner
+      </div>
+    </div>
+    <div class="search-body-container">
+      <div class="search-result-container {{product.isSelected ? 'active' : ''}}" (click)="onSelectProduct(product)" *ngFor="let product of searchResults; let index = index">
+        <div class="s-no">
+          {{index + 1}}
+        </div>
+        <div class="title">{{product.title}}</div>
+        <div class="published-date">
+          {{product.published_date | date}}
+        </div>
+        <div class="product-key">{{product.product_key}}</div>
+        <div class="owner">
+          {{product.owner}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="note">Note: Clicking a row will select item to add into personal wishlist</div>
+  <div class="add-personal-wishlist" *ngIf="isShowAddWishlist" (click)="onAddPersonalWishlist()">
+    Add Wishlist
+  </div>
+
+</div>

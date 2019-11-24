@@ -1,0 +1,112 @@
+.search-container {
+  display: grid;
+  grid-row-gap: 15px;
+  .search-by-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    padding: 5px;
+    border-radius: 4px;
+    padding-bottom: 8px;
+    justify-content: left;
+    column-gap: 30px;
+    grid-row-gap: 10px;
+    .search-by-label {
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .search-by-selector {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-row-start: 2;
+      grid-column-start: 2;
+      justify-content: left;
+      column-gap: 15px;
+      padding: 8px 0 8px 15px;
+      div {
+        font-size: 13px;
+        opacity: 0.7;
+        cursor: pointer;
+        width: max-content;
+        &.active, &:hover {
+          font-weight: bold;
+          opacity: 1;
+        }
+      }
+    }
+    .search-text-container {
+      height: 30px;
+      line-height: 30px;
+      input {
+        outline: none;
+        border: 1px solid #b3b3b3;
+        border-color: #809fff;
+        height: inherit;
+        line-height: 30px;
+        width: 90%;
+        border-radius: 15px;
+        &:active, &:focus {
+          border-width: 2px;
+        }
+      }
+    }
+  }
+
+  .search-results-container {
+    border: 1px solid #b3b3b3;
+    border-radius: 4px;
+    display: grid;
+    .search-header-container {
+      display: grid;
+      grid-template-columns: 80px repeat(4, 1fr);
+      height: 40px;
+      line-height: 40px;
+      padding: 0 15px;
+      border-bottom: 1px solid #8c8c8c;
+      column-gap: 5px;
+      div {
+        font-weight: bold;
+      }
+    }
+    .search-body-container {
+      .search-result-container {
+        display: grid;
+        grid-template-columns: 80px repeat(4, 1fr);
+        padding: 0 15px;
+        border-bottom: 1px solid #b3b3b3;
+        height: 35px;
+        line-height: 35px;
+        column-gap: 5px;
+        cursor: pointer;
+        &.active {
+          background-color: #e6e6e6;
+        }
+      }
+    }
+
+  }
+
+  .note {
+    font-size: 13px;
+  }
+
+  .add-personal-wishlist {
+    width: max-content;
+    padding: 0 8px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    background-color: #3399ff;
+    border-radius: 4px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 13px;
+    cursor: pointer;
+    &:hover {
+      background-color: #fff;
+      border: 1px solid #3399ff;
+      color: #3399ff;
+    }
+  }
+
+}

@@ -1,0 +1,20 @@
+.catalog-network {
+  width: 80%;
+  margin: auto;
+
+  .menu-items {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+    column-gap: 30px;
+    height: 40px;
+    line-height: 40px;
+    a {
+      cursor: pointer;
+      text-decoration: none;
+      &:hover {
+        font-weight: bold;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+<div class="user-list">Active Users</div>
+<div class="users-container">
+  <div class="user-header-container">
+    <div class="s-no">S.No</div>
+    <div class="user-fullname">User Name</div>
+    <div class="user-provider">Provider</div>
+    <div class="user-added-date">Added Date</div>
+  </div>
+  <div class="user-body-container">
+    <div class="user-info-container" *ngFor="let user of users; let index = index">
+      <div class="s-no">{{index + 1}}</div>
+      <div class="user-fullname">{{user.name}}</div>
+      <div class="user-provider">{{user.provider}}</div>
+      <div class="user-added-date">{{user.created_at | date}}</div>
+    </div>
+  </div>
+</div>

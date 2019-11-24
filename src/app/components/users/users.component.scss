@@ -1,0 +1,39 @@
+.user-list {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  padding-bottom: 15px;
+}
+.users-container {
+  border: 1px solid #b3b3b3;
+  border-radius: 4px;
+  .user-header-container {
+    display: grid;
+    grid-template-columns: 40px repeat(3, 1fr);
+    height: 40px;
+    line-height: 40px;
+    padding: 0 15px;
+    border-bottom: 1px solid #8c8c8c;
+    column-gap: 5px;
+    div {
+      font-size: 15px;
+      font-weight: bold;
+    }
+  }
+
+  .user-body-container {
+    .user-info-container {
+      display: grid;
+      grid-template-columns: 40px repeat(3, 1fr);
+      height: 30px;
+      padding: 0 15px;
+      border-bottom: 1px solid #b3b3b3;
+      line-height: 35px;
+      column-gap: 5px;
+      cursor: pointer;
+      div {
+        font-size: 14px;
+      }
+    }
+  }
+}

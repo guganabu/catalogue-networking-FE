@@ -1,0 +1,57 @@
+.add-product-container {
+  width: 600px;
+  box-shadow: 3px 1px 7px 5px #d9d9d9;
+  padding: 15px;
+  margin: auto;
+  .add-product-form {
+    display: grid;
+    grid-row-gap: 8px;
+  }
+  .product-entry-label {
+    color: #666666;
+    font-weight: bold;
+    padding-bottom: 15px;
+    text-align: center;
+  }
+  .product-info-container {
+    display: grid;
+    .product-item {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      height: 40px;
+      .item-label {
+        height: 30px;
+        line-height: 30px;
+        font-size: 15px;
+      }
+      .value {
+        input {
+          height: 30px;
+          line-height: 30px;
+          border: none;
+          border-bottom: 1px solid;
+          width: 100%;
+        }
+      }
+    }
+  }
+  .submit-container {
+    width: max-content;
+    padding: 0 8px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    background-color: #3399ff;
+    border-radius: 4px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 13px;
+    cursor: pointer;
+    justify-self: center;
+    &:hover {
+      background-color: #fff;
+      border: 1px solid #3399ff;
+      color: #3399ff;
+    }
+  }
+}

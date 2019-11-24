@@ -1,0 +1,24 @@
+<div class="add-product-container">
+  <div class="product-entry-label">
+    Product Details
+    </div>
+  <form #addProductForm="ngForm" class="add-product-form" (ngSubmit)="onAddProduct(addProductForm)">
+    <div class="product-info-container">
+      <div class="title-container product-item">
+        <div class="item-label">Title</div>
+        <div class="value"><input type="text" name="title" ngModel /></div>
+      </div>
+      <div class="product-key-container product-item">
+        <div class="item-label">Product Key</div>
+        <div class="value"><input type="text" name="product_key" ngModel placeholder="ISBN/Unique Key" /></div>
+      </div>
+      <div class="catalog-container product-item">
+        <div class="item-label">Catalog</div>
+        <div class="value"><input type="text" name="catalog" ngModel /></div>
+      </div>
+    </div>
+    <button type="submit" class="submit-container">
+      Add Product
+    </button>
+  </form>
+</div>
